@@ -1,0 +1,29 @@
+.navbar-brand{
+    display:flex;
+    flex:left;
+}
+.nav-item{
+    flex:left;
+}
+.nav-item1{
+    flex:right;
+}
+.preet{
+    background-image: url("home_design1.jpg");
+    height:100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.row{
+    background-color: black;
+    padding-top: 1%;
+    margin-top: -32px;
+    width: fit-content;
+}
+.caption{
+    padding-bottom: 5%;
+    color:red;
+}
+

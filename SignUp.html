@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf8">
+    <title>SignUp</title>
+    <link rel="stylesheet" href="stylesheet1.css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Rent_house_stylesheet.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        var data = [" "];
+        document.getElementById("print").innerHTML = data.printForm();
+
+        function printForm() {
+            var x = document.forms["myForm"]["firstname"].value;
+            var y = document.forms["myForm"]["lastname"].value;
+            var z = document.forms["myForm"]["contact"].value;
+            var a = document.forms["myForm"]["country"].value;
+            var b = document.forms["myForm"]["gender"].value;
+            document.getElementById("print").innerHTML = "First Name : " + x + "\n Last Name : " + y + "\n Contact : " + z + "\n Country : " + a + "\n Gender : " + b;
+        }
+
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <a class="navbar-brand" href="Rent_house.html"><span><img src="home_logo.png" height="50px" width="50px"></span>ALQUIRO-O-CASA
+            </ALQUIRO-O-CASA></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+    <div class="list">
+        <center>
+            <h1>REGISTRATION FORM</h1>
+            <form onsubmit="return printForm()" name="myForm">
+                <br><label for="demo1">First Name</label></br>
+                <br><input type="text" id="demo1" name="firstname" placeholder="Your Name.."></br>
+                <br><label for="demo2">Last Name</label></br>
+                <br><input type="text" id="demo2" name="lastname" placeholder="Your Last Name.."></br>
+                <br><label for="demo3">Contact No.</label></br>
+                <br><input type="tel" id="demo3" name="contact" placeholder="Your Mobile no."></br>
+                <br><label for="demo4">Country</label></br>
+                <br><select id="demo4" name="country">
+                    <option value="india">India</option>
+                    <option value="australia">Australia</option>
+                    <option value="canada">Canada</option>
+                    <option value="usa">USA</option>
+                </select></br>
+                <p>Please select your gender:</p>
+                <div class="select-gender">
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label><br>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label><br>
+                    <input type="radio" id="other" name="gender" value="other">
+                    <label for="other">Other</label>
+                </div>
+                <br><input type="submit" value="Submit"></br>
+                <input type="reset">
+        </center>
+        </form>
+    </div>
+    <p id="print"></p>
+
+</body>
+
+</html>
